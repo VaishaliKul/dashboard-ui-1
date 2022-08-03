@@ -1,3 +1,8 @@
 div {
   width: 100%;
 }
+
+ngx-charts-bar-horizontal {
+  width: inherit;
+  height: inherit;
+}
