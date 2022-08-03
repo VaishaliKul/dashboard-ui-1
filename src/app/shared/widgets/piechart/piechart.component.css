@@ -1,0 +1,8 @@
+:host {
+  margin: 0;
+  padding: 0;
+}
+ngx-charts-pie-chart {
+  max-width: 90vw;
+  color: white;
+}

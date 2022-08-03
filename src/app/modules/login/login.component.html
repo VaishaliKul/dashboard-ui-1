@@ -1,0 +1,55 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-title>
+      <a>
+        <img src="https://dev.firstappos.com/assets/img/logo.png" />
+      </a>
+      <h4>
+        <mat-icon role="img">exit_to_app </mat-icon>
+        Login
+      </h4>
+    </mat-card-title>
+    <mat-card-content>
+      <a routerLink="/register">Don't have an account? Sign up now!</a><br />
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Email/Username</mat-label>
+            <input
+              formControlName="username"
+              matInput
+              placeholder="Email/Username"
+            />
+            <mat-icon matPrefix>email</mat-icon>
+            <mat-hint *ngIf="submitted && f['username'].errors?.['required']"
+              >Email/Username is required</mat-hint
+            >
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              formControlName="password"
+              matInput
+              placeholder="Password"
+              [type]="hide ? 'password' : 'text'"
+            />
+            <mat-icon matPrefix>lock</mat-icon>
+            <mat-icon (click)="hide = !hide" matSuffix>{{
+              hide ? "visibility_off" : "visibility"
+            }}</mat-icon>
+            <mat-hint *ngIf="submitted && f['password'].errors?.['required']"
+              >Password is required</mat-hint
+            >
+            <mat-hint *ngIf="submitted && f['password'].errors?.['minlength']"
+              >Password isn't long enough, minimum of 6 characters</mat-hint
+            >
+          </mat-form-field>
+        </p>
+        <a routerLink="/forgot-password">Forgot Password?</a><br />
+        <button mat-raised-button color="primary">Sign In</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

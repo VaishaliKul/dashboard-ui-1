@@ -1,0 +1,25 @@
+footer {
+  background-color: #424242;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.flex-end {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.flex-end .item {
+  margin: 0 20px 0 20px;
+}
+a{
+  text-decoration: underline;
+}
+.flex-end .item .footer {
+  min-width: 800px;
+  flex-grow: 3;
+}

@@ -1,0 +1,43 @@
+.dashboard {
+  background-color: #424242;
+}
+mat-card {
+  text-align: center;
+  margin: 20px;
+  background-color: #303030;
+  color: white;
+}
+
+.dashboard-welcome mat-card {
+  height: 100px;
+  margin: 0;
+  margin-bottom: 40px;
+}
+.dashboard-cards mat-card-title {
+  text-align: end;
+}
+
+.dashboard-cards mat-card-content {
+  text-align: end;
+}
+
+.dashboard-horizontal-bar app-horizontalbar {
+  padding-top: 20px;
+  height: 600px;
+  height: 100%;
+  width: 100%;
+}
+.dashboard-vertical-bar app-verticalbarchart {
+  padding-top: 20px;
+  height: 400px;
+  height: 100%;
+  width: 100%;
+}
+.dashboard-pie-chart {
+  height: 400px;
+  margin-bottom: 0;
+}
+
+.ngx-charts text {
+  color: white;
+}

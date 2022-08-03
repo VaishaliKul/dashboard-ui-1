@@ -1,0 +1,93 @@
+<div fxFlex="100" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card>
+    <mat-card-title>
+      <mat-grid-list cols="1" rowHeight="6:1" gutterSize="0">
+        <mat-grid-tile>
+          <a>
+            <img src="https://dev.firstappos.com/assets/img/logo.png" />
+          </a>
+        </mat-grid-tile>
+        <mat-grid-tile>
+          <h4 style="color: white">
+            <mat-icon role="img"> person_add </mat-icon>
+            Register
+          </h4>
+        </mat-grid-tile>
+      </mat-grid-list>
+    </mat-card-title>
+    <mat-card-content>
+      <a routerLink="/login">Already have a account? Sign In</a>
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input formControlName="name" matInput placeholder="Name" />
+            <mat-icon matPrefix>person</mat-icon>
+            <mat-hint *ngIf="submitted && f['name'].errors"
+              >Name is Required</mat-hint
+            >
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input formControlName="email" matInput placeholder="Email" />
+            <mat-icon matPrefix>email</mat-icon>
+            <mat-hint *ngIf="submitted && f['email'].errors"
+              >Email is Required</mat-hint
+            >
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input
+              formControlName="password"
+              matInput
+              placeholder="Password"
+              [type]="hide ? 'password' : 'text'"
+            />
+            <mat-icon
+              matSuffix
+              (click)="hide = !hide"
+              [attr.aria-label]="'Hide password'"
+              [attr.aria-pressed]="hide"
+              >{{ hide ? "visibility_off" : "visibility" }}</mat-icon
+            >
+
+            <mat-icon role="img" matPrefix>lock</mat-icon>
+
+            <mat-hint *ngIf='submitted && f["password"].errors?.["required"]'
+              >Password is Required
+            </mat-hint>
+            <mat-hint *ngIf='submitted && f["password"].errors?.["minlength"]'
+              >Password isn't long enough, minimum of 6 characters</mat-hint
+            >
+          </mat-form-field>
+        </p>
+        <p>
+          <mat-form-field appearance="outline">
+            <mat-label>Mobile Number</mat-label>
+            <input
+              formControlName="mobile"
+              matInput
+              placeholder="Mobile Number"
+            />
+            <mat-icon matPrefix>phone</mat-icon>
+            <mat-hint *ngIf='submitted && f["mobile"].errors?.["required"]'
+              >Mobile Number is Required
+            </mat-hint>
+          </mat-form-field>
+        </p>
+        <p>
+          <input type="checkbox" [checked]="checked" />
+          <span style="line-height: 1">
+            I agree to the
+            <a (click)="openDialog()">Terms & Conditions</a>
+          </span>
+        </p>
+        <button mat-raised-button>Sign Up</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

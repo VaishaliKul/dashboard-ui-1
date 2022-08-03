@@ -1,0 +1,19 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  background-color: #424242;
+  height: 100%;
+}
+mat-drawer {
+  width: 220px;
+  /* height: 100%; */
+}
+mat-drawer-container {
+  height: 100%;
+}
+
+app-sidebar {
+  color: white;
+  background-color: #424242;
+  height: 100vh;
+}

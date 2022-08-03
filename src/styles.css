@@ -1,1 +1,86 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+a {
+  text-decoration: none;
+}
+.ngx-charts text {
+  fill: white;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+mat-form-field {
+  color: white;
+}
+
+.mat-form-field-outline-start {
+  min-width: 28px !important;
+  border-radius: 28px 0 0 28px !important;
+}
+
+.mat-form-field-outline-end {
+  min-width: 28px !important;
+  border-radius: 0 28px 28px 0 !important;
+}
+.mat-form-field-infix {
+  margin-left: 22px;
+  color: white;
+}
+.mat-form-field-label {
+  color: white !important;
+}
+.mat-form-field-label:focus {
+  color: white !important;
+}
+.mat-input-element ::placeholder {
+  color: white !important;
+}
+.mat-form-field-appearance-outline .mat-form-field-outline {
+  color: white;
+}
+.icons {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+.icons mat-icon {
+  margin: 10px;
+  padding: 10px;
+  background-color: blue;
+  border-radius: 50%;
+  font-size: 30px;
+  width: 30px;
+  height: 30px;
+}
+mat-list {
+  scroll-behavior: unset;
+}
+
+mat-card {
+  background-color: #303030;
+}

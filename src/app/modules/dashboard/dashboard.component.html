@@ -1,0 +1,59 @@
+<div class="dashboard">
+  <div class="dashboard-welcome">
+    <mat-card>
+      <mat-icon>dashboard</mat-icon>
+      <mat-card-title>Welcome to Dashboard</mat-card-title>
+      <mat-card-actions align="start">
+        <mat-icon>add</mat-icon>
+        <mat-icon>send</mat-icon>
+      </mat-card-actions>
+    </mat-card>
+    <span> </span>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="dashboard-cards" fxLayout="row" fxLayoutGap="20">
+    <mat-card fxFlex="20">
+      <mat-card-title>39</mat-card-title>
+      <mat-card-content> COMPLETED APPLICATIONS </mat-card-content>
+    </mat-card>
+    <mat-card fxFlex="20">
+      <mat-card-title>14</mat-card-title>
+      <mat-card-content> COMPLETED APPLICATIONS </mat-card-content> </mat-card
+    ><mat-card fxFlex="20">
+      <mat-card-title>25</mat-card-title>
+      <mat-card-content> COMPLETED APPLICATIONS </mat-card-content> </mat-card
+    ><mat-card fxFlex="20">
+      <mat-card-title>$30433</mat-card-title>
+      <mat-card-content> COMPLETED APPLICATIONS </mat-card-content> </mat-card
+    ><mat-card fxFlex="20">
+      <mat-card-title>36%</mat-card-title>
+      <mat-card-content> COMPLETED APPLICATIONS </mat-card-content>
+    </mat-card>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-card
+    class="dashboard-horizontal-bar"
+    fxLayout="row"
+    fxLayoutAlign="start"
+    (toggleSideBarEvent)="sideBartoggle()"
+  >
+    <app-horizontalbar [fxFlex]="view"></app-horizontalbar>
+  </mat-card>
+  <mat-card
+    class="dashboard-vertical-chart"
+    fxLayout="row"
+    fxLayoutAlign="center"
+    (toggleSideBarEvent)="sideBartoggle()"
+  >
+    <app-verticalbarchart [fxFlex]="view"></app-verticalbarchart>
+  </mat-card>
+  <mat-divider></mat-divider>
+<mat-card
+  class="dashboard-pie-chart"
+    fxLayout="row"
+    fxLayoutAlign="center"
+    (toggleSideBarEvent)="sideBartoggle()"
+  >
+    <app-piechart [fxFlex]="view"></app-piechart>
+  </mat-card>
+</div>

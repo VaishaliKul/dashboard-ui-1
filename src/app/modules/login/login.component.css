@@ -1,0 +1,44 @@
+div {
+  background-color: #303030;
+  height: 100%;
+}
+mat-icon,
+h4 {
+  color: white;
+}
+mat-icon {
+  vertical-align: middle;
+}
+mat-card,
+mat-card-title,
+mat-card-content {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+mat-card {
+  width: 400px;
+  padding: 10px 0 10px 0;
+  background-color: #303030;
+}
+mat-hint {
+  color: red;
+}
+mat-card-title {
+  height: 150px;
+  background-color: #2e88d1;
+}
+button {
+  width: 350px;
+  margin: 10px;
+}
+a {
+  color: #ffd740;
+}
+mat-card-content {
+  background-color: #303030;
+}
+img {
+  width: 150px;
+  height: 60px;
+}

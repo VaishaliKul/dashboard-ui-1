@@ -1,0 +1,34 @@
+.app-main {
+  background-color: #424242;
+}
+.icons {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+}
+mat-icon,
+mat-card-title {
+  text-align: center;
+  color: white;
+}
+mat-card {
+  background-color: #424242;
+}
+/* Structure */
+table,
+mat-paginator {
+  background-color: #424242;
+  width: 100%;
+}
+th {
+  font-weight: bold;
+}
+td,
+th,
+mat-paginator {
+  color: white;
+}
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
